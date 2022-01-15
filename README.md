@@ -1,11 +1,11 @@
 # graylog-spring (free)
 Spring boot Centralized Microservices Logging with Graylog.
 
-#Overview
-###Centralized Logging
+## Overview
+### Centralized Logging
 The first and most important rule of microservice logging is those logs should go to a single place.
 * [Centralized Logging in Microservices Architecture](https://www.papertrail.com/solution/tips/best-practices-for-centralized-logging-in-microservices-architecture/)
-###Graylog (free version)
+### Graylog (free version)
 Graylog is a leading centralized log management solution for capturing, storing, and enabling real-time analysis of terabytes of machine data. Graylog is based on Elasticsearch, MongoDB, and Scala. It has a main server that receives data from its clients which are installed on different servers. It has a web interface that visualizes the data and allows it to work with the logs aggregated by the main server.
 * [Graylog](https://www.graylog.org/)
 
@@ -13,21 +13,21 @@ Graylog architecture
 ![graylog_architecture](images/GraylogArch.jpeg)
 More explanation about [Graylog Server](https://www.youtube.com/watch?v=rtfj6W5X0YA&t=1557s)
 
-#Prerequisites
+## Prerequisites
 - Java >=11 
 - [Slf4j](https://www.baeldung.com/slf4j-with-log4j2-logback)
 - [MDC](https://docs.mulesoft.com/mule-runtime/4.4/logging-mdc)
 - Docker
 - Maven
 
-#Installation
+## Installation
 Here is explained locally installation. The same steps can be used for installation on other servers. Just change host and ports.
-##How to install Graylog with Docker
+### How to install Graylog with Docker
 1. Clone project
 2. Run docker-compose file with command `docker-compose up -d`
 3. When import finish, go to http://127.0.0.1:9000 and log in with user admin/admin
 
-##How to send logs to Graylog
+### How to send logs to Graylog
 In this example will be used Logback-gelf for sending logs to Graylog.  [Logback-gelf](https://github.com/osiegmar/logback-gelf)
 
 1. Add Logback-gelf dependency in pom.xml file
@@ -104,3 +104,13 @@ In this example will be used Logback-gelf for sending logs to Graylog.  [Logback
 ![capture_3](images/fieldsGit.PNG)
 7. You should be able to see logs along with our additional columns
 ![capture_4](images/logsGit.PNG)
+
+## Authors
+
+* **Milos Krsmanovic** - *Software Engineer* - [Dagli](https://github.com/daglii)
+
+## My projects
+Take a look at my other projects
+
+- Centralized Microservice Logging with Graylog [Graylog with Spring](https://github.com/daglii/graylog-spring)
+- GRPC Communication between Microservices [Grpc Server](https://github.com/daglii/spring-grpc-server) - [Grpc Client](https://github.com/daglii/spring-grpc-client)
